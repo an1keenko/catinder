@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Rubik, sans-serif;
+    line-height: 1.4;
+    color: inherit;
+}
+
+:root {
+    --color-background: #fff;
+    --color-accent: #fd3a73;
+    --color-text: #333;
+    --color-extra: rgba(102, 113, 128, 0.76);
+    --color-extra-accent: #ff7854;
+}
+
+:root[data-theme-name="dark"] {
+    --color-background: #333;
+    --color-accent: #fd3a73;
+    --color-text: #fff;
+    --color-extra: rgba(102, 113, 128, 0.76);
+    --color-extra-accent: #ff7854;
+}
+
+body {
+    background-color: var(--color-background);
+}
+
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--color-accent);
+    margin-bottom: 50px;
+}
+
+.header__title {
+    font-size: 60px;
+    color: #fff;
+}
+
+.main {
+    padding: 0 5%;
+    margin-bottom: 100px;
+}
+
+.settings {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.settings__title {
+    margin-bottom: 12px;
+    color: var(--color-text);
+}
+
+.settings__button {
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: var(--color-accent);
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out;
+    opacity: 0.2;
+}
+
+.settings__button:hover {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+    opacity: 1;
+}
+
+.settings__button.active {
+    opacity: 1;
+}
+
+.cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards.tiles {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.cards.tiles .cards__item {
+    height: 400px;
+    flex-basis: 400px;
+    margin: 0;
+}
+
+.cards.tiles .cards__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.cards__item {
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    margin-bottom: 60px;
+    user-select: none;
+}
+
+.cards__item:last-child {
+    margin-bottom: 0;
+}
+
+.cards__img {
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+}
+
+.cards__btn {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    border: none;
+    background: none;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 350ms ease-in-out, transform 350ms;
+}
+
+.cards__btn:hover {
+    transform: scale(1.1);
+    color: var(--color-background);
+}
+
+.cards__btn--liked {
+    color: rgba(253, 38, 122, 0.9);
+}
+
+.cards__btn--liked:hover {
+    color: var(--color-accent);
+}
+
+.cards__info {
+    position: absolute;
+    bottom: -100%;
+    padding: 40px 20px 40px 40px;
+    background-color: var(--color-extra);
+    width: 100%;
+    opacity: 0;
+    transition: opacity 600ms ease-in-out, bottom 350ms ease-out;
+}
+
+.cards__item:hover .cards__info {
+    bottom: 0;
+    opacity: 1;
+}
+
+.cards__name {
+    color: var(--color-extra-accent);
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.cards__about {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-background);
+}
+
+.scroll {
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    border: none;
+    background: none;
+    position: fixed;
+    cursor: pointer;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0.2;
+    transition: opacity 250ms ease-in-out;
+}
+
+.scroll:hover {
+    opacity: 1;
+}
+
+.footer {
+    text-align: center;
+    background-color: #424242;
+    padding: 70px 20px 50px;
+}
+
+.footer__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer__link {
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

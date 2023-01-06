@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme-name="light">
+<head>
+    <meta charset="UTF-8" />
+    <title>Catinder</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@300;400;500;700&family=Smooch+Sans:wght@900&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<header class="header">
+    <h1 class="header__title">Catinder</h1>
+</header>
+<main class="main">
+    <section class="settings">
+        <div
+                data-setting-target=":root"
+                data-setting-type="attribute"
+                class="settings__theme js-buttons-container"
+        >
+            <h2 class="settings__title">Темы</h2>
+            <button
+                    class="settings__button active light-theme"
+                    data-setting-name="themeName"
+                    data-setting-value="light"
+                    type="button"
+            >
+                Светлая
+            </button>
+            <button
+                    class="settings__button dark-theme"
+                    data-setting-name="themeName"
+                    data-setting-value="dark"
+                    type="button"
+            >
+                Темная
+            </button>
+        </div>
+        <div
+                data-setting-target=".cards"
+                data-setting-type="class"
+                class="settings__view js-buttons-container"
+        >
+            <h2 class="settings__title">Вид</h2>
+            <button
+                    class="settings__button active list-view"
+                    data-setting-name="viewName"
+                    data-setting-value="list"
+                    type="button"
+            >
+                Список
+            </button>
+            <button
+                    class="settings__button tiles-view"
+                    data-setting-name="viewName"
+                    data-setting-value="tiles"
+                    type="button"
+            >
+                Плитка
+            </button>
+        </div>
+    </section>
+    <ul class="cards"></ul>
+    <button class="scroll visually-hidden" aria-label="Вернуться">
+        <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="70"
+                height="70"
+                x="0"
+                y="0"
+                viewBox="0 0 512.00013 512"
+        >
+            <g>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m181 152.34375c33.089844 0 60-26.910156 60-60 0-26.808594-21.019531-92.34375-60-92.34375s-60 65.535156-60 92.34375c0 33.089844 26.910156 60 60 60zm0 0"
+                        fill="#ff655b"
+                        data-original="#68544f"
+                ></path>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m96.898438 262.691406c28.605468-16.523437 38.597656-53.144531 21.957031-81.957031-13.417969-23.21875-64.425781-69.421875-98.128907-49.980469-33.75 19.511719-19.191406 86.777344-5.800781 109.980469 16.527344 28.589844 53.101563 38.609375 81.972657 21.957031zm0 0"
+                        fill="#ff655b"
+                        data-original="#68544f"
+                ></path>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m331 152.34375c33.089844 0 60-26.910156 60-60 0-26.808594-21.019531-92.34375-60-92.34375s-60 65.535156-60 92.34375c0 33.089844 26.910156 60 60 60zm0 0"
+                        fill="#ff5864"
+                        data-original="#53433f"
+                        class=""
+                ></path>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m415.25 262.148438c28.890625 16.667968 65.476562 6.5625 81.957031-21.972657 15.789063-27.328125 25.507813-91.890625-5.785156-109.980469-33.824219-19.480468-84.742187 26.765626-98.128906 49.980469-16.574219 28.6875-6.78125 65.359375 21.957031 81.972657zm0 0"
+                        fill="#ff5864"
+                        data-original="#53433f"
+                        class=""
+                ></path>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m421 347.34375c0 41.398438-40.5 75-90 75-9.902344 0-18.601562-.902344-26.699219-3-15.898437-4.199219-32.101562-6-48.300781-6s-32.402344 1.800781-48.300781 6c-8.101563 2.097656-16.800781 3-26.699219 3-49.5 0-90-33.601562-90-75 0-28.5 19.800781-54.902344 50.699219-67.5 5.699219-2.402344 9.300781-7.800781 9.300781-13.800781v-8.699219c0-75 78.898438-75 105-75s105 0 105 75v8.699219c0 6 3.601562 11.398437 9.300781 13.800781 30.902344 12.597656 50.699219 39 50.699219 67.5zm0 0"
+                        fill="#ff655b"
+                        data-original="#68544f"
+                ></path>
+                <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        d="m421 347.34375c0 41.398438-40.5 75-90 75-9.902344 0-18.601562-.902344-26.699219-3-15.898437-4.199219-32.101562-6-48.300781-6v-231c26.101562 0 105 0 105 75v8.699219c0 6 3.601562 11.402343 9.300781 13.800781 30.902344 12.597656 50.699219 39 50.699219 67.5zm0 0"
+                        fill="#ff5864"
+                        data-original="#53433f"
+                        class=""
+                ></path>
+            </g>
+        </svg>
+    </button>
+</main>
+<footer class="footer">
+    <p class="footer__text">
+        Помогай котикам, которые всё ещё ищут своего человека
+        <a class="footer__link" href="https://zooshans.by/" target="_blank"
+        >здесь</a
+        >
+    </p>
+</footer>
+<script src="src/mock.js"></script>
+<script src="src/create-html.js"></script>
+<script src="src/interactions.js"></script>
+<script src="src/scroll-to.js"></script>
+<script src="src/change-theme.js"></script>
+</body>
+</html>

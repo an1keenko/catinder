@@ -1,7 +1,6 @@
 const scrollBtn = document.querySelector('.scroll');
 
 const handleScroll = () => {
-  console.log(window.pageYOffset);
   if (window.pageYOffset >= 1) {
     scrollBtn.classList.remove('visually-hidden');
   }
@@ -25,8 +24,4 @@ const scrollTo = () => {
 }
 
 window.addEventListener('scroll', handleScroll);
-scrollBtn.addEventListener('click', scrollTo)
-
-
-
-
+scrollBtn.addEventListener('click', scrollTo);
